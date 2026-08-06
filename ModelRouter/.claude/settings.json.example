@@ -1,0 +1,20 @@
+{
+  "_comment_1": "Hook registration for the model router. Merge these keys into your real settings.json, do not overwrite the file. Global copy lives at ~/.claude/settings.json, project copy at <project>/.claude/settings.json.",
+
+  "_comment_2": "Write the command as ONE string. The {'command': 'python', 'args': [...]} form breaks if anything downstream drops 'args': you are left with a bare 'python' that reads the hook payload from stdin and executes it as source, which fails exactly like the hook never firing.",
+
+  "_comment_3": "On Windows use the full path instead of ~, e.g. C:/Users/YOU/.claude/hooks/router_hook.py, and 'python' rather than 'python3'.",
+
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python ~/.claude/hooks/router_hook.py"
+          }
+        ]
+      }
+    ]
+  }
+}

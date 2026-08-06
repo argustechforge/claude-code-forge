@@ -7,6 +7,10 @@ one, based on a router that has been running in production across a multi-machin
 You do not need all of it. The guide is layered, and Level 1 alone recovers most of the benefit for
 about twenty minutes of work.
 
+> If you would rather install a working one than build it, [`ModelRouter/`](../ModelRouter/) in this
+> repo is Levels 1 through 3 already assembled, laid out so that installing is a copy. This guide is
+> the reasoning behind it.
+
 ---
 
 ## The problem this solves

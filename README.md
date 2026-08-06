@@ -11,16 +11,19 @@ Everything here is built to be installed one of two ways:
 
 Nothing depends on a particular machine, and nothing requires editing a plugin's own files.
 
-## Guides
+## What is here
 
-| Guide | What it covers |
-|-------|----------------|
-| [Build your own model router](./guides/model-router-diy.md) | Routing work to the right model, effort and provider. Four levels, from a twenty-minute policy file up to a hook that classifies every prompt. |
-| [Superpowers augments, full set](./guides/superpowers-augments-full.md) | The complete set of changes to the Superpowers brainstorming flow: no phase gates, better question formatting, subagent-driven handoff, model policy. |
-| [Superpowers augments, routing only](./guides/superpowers-augments-router-only.md) | Just the part that assigns models to implementation subagents. A strict subset of the full set. |
+| | What it is |
+|---|---|
+| **[ModelRouter/](./ModelRouter/)** | A working simplified model router. Copy `ModelRouter/.claude/` into `~/.claude/` or a project's `.claude/` and it runs. Standard-library Python, no dependencies. |
+| [guides/model-router-diy.md](./guides/model-router-diy.md) | How to build a router yourself, in four levels, from a twenty-minute policy file up to a hook that classifies every prompt. The reasoning behind ModelRouter. |
+| [guides/superpowers-augments-full.md](./guides/superpowers-augments-full.md) | The complete set of changes to the Superpowers brainstorming flow: no phase gates, better question formatting, subagent-driven handoff, model policy. |
+| [guides/superpowers-augments-router-only.md](./guides/superpowers-augments-router-only.md) | Just the part that assigns models to implementation subagents. A strict subset of the full set. |
 
-If you are starting from scratch and only have twenty minutes, read the Level 1 section of the model
-router guide. It is a single text file, and it prevents the most expensive mistake in the list.
+If you have twenty minutes, read the Level 1 section of the model router guide. It is a single text
+file, and it prevents the most expensive mistake in the list.
+
+If you want the thing running today, install [ModelRouter](./ModelRouter/).
 
 ## Why this exists
 
@@ -38,4 +41,4 @@ appear.
 
 ## Status
 
-Early. The guides are here. The drop-in `.claude/` payload is next.
+Early. The guides and the ModelRouter drop-in are here. More tooling to follow.

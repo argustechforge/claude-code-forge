@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "_comment": "Routing table for the simplified model router. Edit freely. First route whose 'when' conditions all hold wins, so keep an unconditional fallback last in every list.",
+
+  "providers": {
+    "anthropic": { "enabled": true },
+    "local": { "enabled": false, "endpoint": "http://localhost:1234/v1" }
+  },
+
+  "autonomy": {
+    "mode": "hybrid",
+    "_comment": "Classes listed here are dispatched without asking. They are read-heavy, so a wrong call costs a wasted subagent and nothing else. Anything that edits code stays opt-in.",
+    "auto_dispatch_classes": [
+      "research_locate",
+      "summarization",
+      "bulk_data_processing",
+      "investigation_diagnosis"
+    ]
+  },
+
+  "task_classes": {
+    "architecture_planning": {
+      "difficulty": "hard",
+      "routes": [
+        { "provider": "anthropic", "model": "opus", "effort": "xhigh", "via": "main-session", "when": { "budget_below": 90 } },
+        { "provider": "anthropic", "model": "sonnet", "effort": "xhigh", "via": "main-session" }
+      ]
+    },
+    "final_review": {
+      "difficulty": "hard",
+      "routes": [
+        { "provider": "anthropic", "model": "opus", "effort": "xhigh", "via": "subagent", "when": { "budget_below": 95 } },
+        { "provider": "anthropic", "model": "sonnet", "effort": "xhigh", "via": "subagent" }
+      ]
+    },
+    "routine_review": {
+      "difficulty": "medium",
+      "routes": [
+        { "provider": "anthropic", "model": "sonnet", "effort": "high", "via": "subagent" }
+      ]
+    },
+    "investigation_diagnosis": {
+      "difficulty": "medium",
+      "routes": [
+        { "provider": "anthropic", "model": "sonnet", "effort": "high", "via": "subagent" }
+      ]
+    },
+    "implementation_standard": {
+      "difficulty": "medium",
+      "routes": [
+        { "provider": "anthropic", "model": "sonnet", "effort": "high", "via": "subagent" }
+      ]
+    },
+    "implementation_mechanical": {
+      "difficulty": "easy",
+      "routes": [
+        { "provider": "anthropic", "model": "haiku", "effort": "low", "via": "subagent" },
+        { "provider": "local", "tier": "small", "via": "api", "advisory": true }
+      ]
+    },
+    "research_locate": {
+      "difficulty": "easy",
+      "routes": [
+        { "provider": "anthropic", "model": "haiku", "effort": "medium", "via": "subagent" }
+      ]
+    },
+    "summarization": {
+      "difficulty": "easy",
+      "routes": [
+        { "provider": "anthropic", "model": "haiku", "effort": "medium", "via": "subagent" },
+        { "provider": "local", "tier": "small", "via": "api", "advisory": true }
+      ]
+    },
+    "bulk_data_processing": {
+      "difficulty": "easy",
+      "routes": [
+        { "provider": "anthropic", "model": "haiku", "effort": "low", "via": "subagent" }
+      ]
+    },
+    "long_context_analysis": {
+      "difficulty": "medium",
+      "routes": [
+        { "provider": "anthropic", "model": "sonnet", "effort": "medium", "via": "main-session" }
+      ]
+    }
+  }
+}

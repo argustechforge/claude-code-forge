@@ -1,0 +1,8 @@
+# Router runtime data. Generated on use, machine-specific, never committed.
+.claude/router/decisions.jsonl
+.claude/router/state.json
+ModelRouter/.claude/router/decisions.jsonl
+ModelRouter/.claude/router/state.json
+
+__pycache__/
+*.pyc
