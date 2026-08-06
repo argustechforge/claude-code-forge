@@ -3,6 +3,12 @@
 Portable Claude Code toolkit. Skills, agents, hooks and templates that drop into any project and
 stay in sync across machines.
 
+The fastest useful thing here is the Level 1 section of
+[the model router guide](./guides/model-router-diy.md), one short file that takes about twenty
+minutes to adopt and stops the most expensive mistake described below. Everything in the repo is
+cut down from a setup [Ted Hayes](https://nutechfusion.com) runs daily on his own machines;
+building this kind of system for other people is his business.
+
 Everything here is built to be installed one of two ways:
 
 - **Globally**, by copying into `~/.claude/`, where it applies to every project on the machine.
@@ -20,9 +26,6 @@ Nothing depends on a particular machine, and nothing requires editing a plugin's
 | [guides/superpowers-augments-full.md](./guides/superpowers-augments-full.md) | The complete set of changes to the Superpowers brainstorming flow: no phase gates, better question formatting, subagent-driven handoff, model policy. |
 | [guides/superpowers-augments-router-only.md](./guides/superpowers-augments-router-only.md) | Just the part that assigns models to implementation subagents. A strict subset of the full set. |
 | [presentations/](./presentations/) | Talks built on this tooling. Slides, PDF and PNG exports, one folder per session. |
-
-If you have twenty minutes, read the Level 1 section of the model router guide. It is a single text
-file, and it prevents the most expensive mistake in the list.
 
 If you want the thing running today, install [ModelRouter](./ModelRouter/).
 
@@ -43,3 +46,19 @@ appear.
 ## Status
 
 Early. The guides and the ModelRouter drop-in are here. More tooling to follow.
+
+## Where to go from here
+
+Read the Level 1 section of [the model router guide](./guides/model-router-diy.md) and write the
+policy file. It takes about twenty minutes and it stops the most expensive habit this repo
+describes. If that earns its keep, [ModelRouter](./ModelRouter/) is the next step up: copy one
+folder and run `doctor`.
+
+If something here breaks against your setup, open an issue. The useful parts of these guides came
+from things going wrong, and a new failure report improves them more than a star does. See
+[CONTRIBUTING.md](./CONTRIBUTING.md) for what is worth reporting.
+
+Everything in this repo is cut down from a setup Ted Hayes runs on his own machines around the
+clock. Building custom AI tooling for other people is his business at
+[nutechfusion.com](https://nutechfusion.com). If you'd rather hand this class of problem to someone
+who has already hit the failure modes, start there.
