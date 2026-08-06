@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="35 62 330 330">
+  <!-- V4: one xhigh dial fanning out into identical copies — silent cost multiplication.
+       Simplified 2026-07-20 for legibility at the 74px deck size: five copies -> three,
+       heavier strokes, and the "XHIGH" mono label dropped (it rendered ~2px tall in the deck
+       and is already carried by the card copy beside it). -->
+  <defs>
+    <g id="v4mini" fill="none" stroke="#F2B33D" stroke-width="6">
+      <path d="M-38 14 A38 38 0 0 1 38 14"/>
+      <line x1="0" y1="14" x2="25" y2="-11" stroke-linecap="round"/>
+      <circle cx="0" cy="14" r="5" fill="#F2B33D" stroke="none"/>
+    </g>
+  </defs>
+  <rect x="35" y="62" width="330" height="330" fill="#0B0E11"/>
+  <!-- fork lines: one deliberate setting, inherited N times -->
+  <g stroke="#F2B33D" stroke-width="4" opacity="0.85">
+    <line x1="200" y1="182" x2="85" y2="335"/>
+    <line x1="200" y1="182" x2="200" y2="335"/>
+    <line x1="200" y1="182" x2="315" y2="335"/>
+  </g>
+  <!-- the one dial you actually set, pinned high -->
+  <g transform="translate(200,150)">
+    <path d="M-80 30 A80 80 0 0 1 80 30" fill="none" stroke="#F2B33D" stroke-width="8"/>
+    <g stroke="#F2B33D" stroke-width="5" stroke-linecap="round">
+      <line x1="-69" y1="8" x2="-58" y2="13"/>
+      <line x1="0" y1="-50" x2="0" y2="-38"/>
+      <line x1="69" y1="8" x2="58" y2="13"/>
+    </g>
+    <line x1="0" y1="30" x2="52" y2="-18" stroke="#F2B33D" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="0" cy="30" r="9" fill="#F2B33D"/>
+  </g>
+  <!-- the identical inherited copies -->
+  <use href="#v4mini" transform="translate(85,335)"/>
+  <use href="#v4mini" transform="translate(200,335)"/>
+  <use href="#v4mini" transform="translate(315,335)"/>
+</svg>

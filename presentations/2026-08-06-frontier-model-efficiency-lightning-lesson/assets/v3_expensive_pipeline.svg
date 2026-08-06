@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="13 18.5 382 382">
+  <!-- V3: premium tool run at every pipeline step; only the last station earns it.
+       Simplified 2026-07-20 for legibility at the 74px deck size: four stations -> three,
+       heavier strokes, and the tiny "idle plain tool" glyph removed (it rendered as noise
+       at small size and duplicated V1's idle side-channel idea). -->
+  <defs>
+    <g id="v3gear" stroke="#8B96A3" stroke-width="8" fill="none">
+      <circle r="40"/>
+      <g stroke-width="10" stroke-linecap="round">
+        <line x1="-40" y1="0" x2="-58" y2="0"/><line x1="40" y1="0" x2="58" y2="0"/>
+        <line x1="0" y1="-40" x2="0" y2="-58"/><line x1="0" y1="40" x2="0" y2="58"/>
+      </g>
+    </g>
+    <g id="v3tool">
+      <path fill="#F2B33D" d="M0 -40 a26 26 0 0 0 -34 34 l-9 62 a18 18 0 0 0 36 0 l-9 -62 a26 26 0 0 0 16 -34 z"/>
+      <circle cy="-20" r="6" fill="#0B0E11"/>
+    </g>
+  </defs>
+  <rect x="13" y="18.5" width="382" height="382" fill="#0B0E11"/>
+  <!-- the same premium tool sitting above every station -->
+  <use href="#v3tool" transform="translate(85,130)"/>
+  <use href="#v3tool" transform="translate(200,130)"/>
+  <use href="#v3tool" transform="translate(315,130)"/>
+  <!-- the pipeline stations themselves -->
+  <use href="#v3gear" transform="translate(85,265)"/>
+  <use href="#v3gear" transform="translate(200,265)"/>
+  <use href="#v3gear" transform="translate(315,265)"/>
+  <!-- gold halo on the FINAL station — the only one the premium tool actually earns -->
+  <circle cx="315" cy="265" r="66" fill="none" stroke="#F2B33D" stroke-width="5"/>
+</svg>

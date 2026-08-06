@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="114 108 324 324">
+  <!-- V2: lightweight tool stacking code blocks with no plan underneath; top block cracked/off-axis -->
+  <!-- viewBox is a square centred on the measured content bbox (176,120)-(376,420) so the icon
+       sits centred in a square slot; artwork coordinates are unchanged. -->
+  <rect x="114" y="108" width="324" height="324" fill="#0B0E11"/>
+  <!-- three stacked code-block glyphs (light gray) -->
+  <g fill="none" stroke="#E9EDF1" stroke-width="6" stroke-linejoin="round">
+    <rect x="176" y="360" width="160" height="60" rx="8"/>
+    <rect x="186" y="288" width="140" height="60" rx="8"/>
+    <!-- top block off-axis / leaning -->
+    <g transform="rotate(-11 256 240)"><rect x="196" y="212" width="120" height="56" rx="8"/></g>
+  </g>
+  <!-- code marks inside blocks -->
+  <g stroke="#8B96A3" stroke-width="4" stroke-linecap="round">
+    <line x1="196" y1="382" x2="236" y2="382"/><line x1="196" y1="398" x2="290" y2="398"/>
+    <line x1="206" y1="310" x2="246" y2="310"/><line x1="206" y1="326" x2="286" y2="326"/>
+  </g>
+  <!-- crack + misalignment on top block, dashed ghost-gray (no red accent) -->
+  <g stroke="#525A64" stroke-width="4" fill="none" stroke-dasharray="9 7" stroke-linecap="round">
+    <path d="M250 214 l-8 20 l10 14 l-8 18"/>
+  </g>
+  <!-- lightweight feather (sky blue) doing the stacking -->
+  <g fill="#3DB8E8">
+    <path d="M372 120 c-70 8 -132 60 -150 140 c-4 18 8 24 22 14 c60 -44 104 -96 128 -154 z"/>
+  </g>
+  <g stroke="#0B0E11" stroke-width="3" fill="none">
+    <path d="M356 150 c-40 24 -74 62 -92 108"/>
+    <path d="M352 176 l24 -6 M330 208 l26 -6 M310 244 l28 -6"/>
+  </g>
+</svg>

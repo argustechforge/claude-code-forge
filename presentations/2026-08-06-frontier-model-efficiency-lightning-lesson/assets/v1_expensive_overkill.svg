@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="64.5 78.5 415 415">
+  <!-- V1: expensive premium tool answering a trivial question; a lightweight side-channel sits idle -->
+  <!-- viewBox is a square centred on the measured content bbox (80,150)-(464,422) so the icon
+       sits centred in a square slot; artwork coordinates are unchanged. -->
+  <rect x="64.5" y="78.5" width="415" height="415" fill="#0B0E11"/>
+  <!-- idle, unused plain side-channel speech bubble (ghost gray) -->
+  <g stroke="#525A64" stroke-width="6" fill="none" stroke-linejoin="round">
+    <path d="M330 300 h120 a14 14 0 0 1 14 14 v58 a14 14 0 0 1 -14 14 h-70 l-26 26 v-26 h-24 a14 14 0 0 1 -14 -14 v-58 a14 14 0 0 1 14 -14 z"/>
+  </g>
+  <!-- the question-mark bubble being tapped (muted gray) -->
+  <g stroke="#8B96A3" stroke-width="7" fill="none" stroke-linejoin="round">
+    <path d="M96 150 h150 a16 16 0 0 1 16 16 v70 a16 16 0 0 1 -16 16 h-92 l-34 32 v-32 h-24 a16 16 0 0 1 -16 -16 v-70 a16 16 0 0 1 16 -16 z"/>
+    <path d="M150 182 a24 24 0 0 1 44 13 c0 20 -22 20 -22 36" stroke-linecap="round"/>
+    <circle cx="172" cy="238" r="2.5" fill="#8B96A3" stroke="none"/>
+  </g>
+  <!-- ornate gem-studded golden wrench reaching over to tap the bubble (amber-gold) -->
+  <g fill="#F2B33D">
+    <path d="M300 210 a44 44 0 0 0 -60 60 l-120 120 a20 20 0 0 0 28 28 l120 -120 a44 44 0 0 0 60 -60 l-30 30 l-28 -2 l-2 -28 z"/>
+  </g>
+  <!-- gem studs on the wrench (accent, same hue outline) -->
+  <g fill="#0B0E11" stroke="#F2B33D" stroke-width="3">
+    <path d="M188 322 l10 -10 l10 10 l-10 10 z"/>
+    <path d="M158 352 l9 -9 l9 9 l-9 9 z"/>
+  </g>
+</svg>

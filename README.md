@@ -19,6 +19,7 @@ Nothing depends on a particular machine, and nothing requires editing a plugin's
 | [guides/model-router-diy.md](./guides/model-router-diy.md) | How to build a router yourself, in four levels, from a twenty-minute policy file up to a hook that classifies every prompt. The reasoning behind ModelRouter. |
 | [guides/superpowers-augments-full.md](./guides/superpowers-augments-full.md) | The complete set of changes to the Superpowers brainstorming flow: no phase gates, better question formatting, subagent-driven handoff, model policy. |
 | [guides/superpowers-augments-router-only.md](./guides/superpowers-augments-router-only.md) | Just the part that assigns models to implementation subagents. A strict subset of the full set. |
+| [presentations/](./presentations/) | Talks built on this tooling. Slides, PDF and PNG exports, one folder per session. |
 
 If you have twenty minutes, read the Level 1 section of the model router guide. It is a single text
 file, and it prevents the most expensive mistake in the list.
